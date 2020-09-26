@@ -21,7 +21,7 @@ Il souhaiterait dans un premier temps intégrer les fonctionnalités çi-dessous
 
 - Intégrer un embryon de formulaire de connexion, en effet plus tard il faudra pouvoir gérer les utilisateurs de l’application. Rajoutez une page de connexion avec un formulaire demandant un login et un mot de passe. Le login et le mdp rentrés sont comparés à un login et un mdp stockés en dur dans le fichier et s’ils sont identiques l’utilisateur est redirigé vers l’application.
 
-- Intégrer un embryon de formulaire de connexion, en effet plus tard il faudra pouvoir gérer les utilisateurs de l’application. Rajoutez une page de connexion avec un formulaire demandant un login et un mot de passe. Le login et le mdp rentrés sont comparés à un login et un mdp stockés en dur dans le fichier et s’ils sont identiques l’utilisateur est redirigé vers l’application.
+- A la création d’un compte bancaire appliquer des vérifications de sécurité. Par exemple, vérifier que le type de compte est bien un type de compte autorisé (courant, pel, livret a, …). Vérifier également que les montant minimum à l’ouverture est bien d’au moins 50 euros.
 
 
 ## Spécifications techniques :
