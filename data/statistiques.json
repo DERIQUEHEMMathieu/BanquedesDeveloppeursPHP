@@ -1,0 +1,26 @@
+[
+    {
+        "Pays":"France",
+        "Indice boursier ":"CAC40",
+        "Valeur actuelle": 5002,
+        "Indexation": "-"
+    },
+    {
+        "Pays":"Zone Euro",
+        "Indice boursier ":"Euro Stoxx 50",
+        "Valeur actuelle": 3327,
+        "Indexation": "-"
+    },
+    {
+        "Pays":"Etats-unis",
+        "Indice boursier ":"NASDAQ",
+        "Valeur actuelle": 131,
+        "Indexation": "-"
+    },
+    {
+        "Pays":"Etats-unis",
+        "Indice boursier ":"Dow Jones",
+        "Valeur actuelle":28.653,
+        "Indexation": "+"
+    }
+]

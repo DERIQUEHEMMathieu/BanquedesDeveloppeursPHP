@@ -1,0 +1,19 @@
+Mathieu, 33 arrive sur la page Index de sa banque "Banque des Développeurs".
+
+Mathieu, 33 ans, voit apparaître sur la page d'accueil un layer lui rappelant les règles de sécurité essentielles sur un site internet.
+
+Mathieu, 33 ans, voit plusieurs liens dans la barre de navigation lui permettant d'accéder à la page "Statistiques", "Gestion", "Virements" 
+et "Articles".
+
+Mathieu, 33 ans, voit apparaître sous forme de cartes, dans le main, ses différents comptes bancaires avec un lien lui permettant de se diriger
+vers la page "Comptes" afin de réaliser un dépôt ou un retrait d'argent. Un second lien lui permet de demander la suppresion de son compte.
+
+Mathieu, 33 ans, se dirige sur la page "Statistiques". Les différents taux bancaires, boursiers et le cours de la bourse apparaîssent.
+
+Mathieu, 33 ans, arrive sur la page "Gestion". Un formulaire lui propose la création d'un compte avec un choix de possibilités de comptes et un 
+dépôt minimum de 50€.
+
+Mathieu, 33 ans, arrive sur la page "Virements". Un formulaire permet de réaliser un virement entre ses comptes.
+
+Mathieu, 33 ans, souhaite aller sur la page "Articles". Des articles récupérés de l'API https://oc-jswebsrv.herokuapp.com/api/articles 
+s'affichent.

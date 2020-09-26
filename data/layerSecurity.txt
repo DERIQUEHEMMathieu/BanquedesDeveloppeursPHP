@@ -1,0 +1,4 @@
+- Ne jamais cliquer sur un lien suspect.
+- Vérifier que les URL incluses dans les messages sont en Https (signe que le site est sécurisé).
+- Vérifier l’adresse e-mail de l’émetteur (pas seulement son nom).
+- Les fautes d’orthographe sont aussi suspectes.
