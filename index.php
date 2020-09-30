@@ -30,7 +30,7 @@ foreach ($acounts as $key => $value) :
   <div class="card-body bg-white text-center p-1">
     <p class="card-text text-dark">Dernière opération : <br> <?php echo $value['last_operation'] ?>*</p>
     <h5 class="card-title text-danger font-weight-bold">Solde : <?php echo $value['amount'] ?> €*</h5>
-    <a href="details.php<?php echo "?id=$key"; ?>" class="btn btn-secondary text-white">Voir</a>
+    <a href="single.php<?php echo "?id=$key"; ?>" class="btn btn-secondary text-white">Voir</a>
     <a href="comptes.php<?php echo "?id=$key"; ?>" class="btn btn-secondary text-white">Retrait / Dépôt</a>
     <a href="delete.php<?php echo "?id=$key"; ?>" class="btn btn-secondary text-white">Clôturer</a>
     <p class="card-text text-center text-muted">* Sous réserves de vos dernières opérations bancaires.</p>
