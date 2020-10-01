@@ -32,8 +32,8 @@ require "template/nav.php"; ?>
       </div>
       <div class="form-group" style="white-space: pre-line;">
         <label for="amount">Indiquez un montant à déposer sur le compte*</label>
-        <input style="width: 100px;" type="number" name="amount" id="amount" min="50" value="50">
-        <span class="text-muted">* Un dépôt de 50 € est nécessaire pour un nouveau compte</span>
+        <input style="width: 100px;" type="float" name="amount" id="amount" min="50" value="50">
+        <span class="text-muted">* Un dépôt de 50 € est nécessaire pour l'ouverture d'un nouveau compte</span>
       </div>
       <div class="text-center">
         <button name="new_account" type="submit" class="btn btn-secondary text-white">Lancez la création</button>

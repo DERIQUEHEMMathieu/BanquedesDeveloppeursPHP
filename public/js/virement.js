@@ -20,7 +20,7 @@ accountToCredit.addEventListener("focusout", function() {
     }
 });
 
-amounToTransfert.addEventListener("focusout", function() {
+amountToTransfert.addEventListener("focusout", function() {
     if(this.value === "") {
         this.style.borderColor = "red";
         amountFalse.innerText = "Veuillez rentrer un montant superieur à 0€";

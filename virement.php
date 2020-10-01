@@ -27,7 +27,7 @@ require "template/nav.php"; ?>
         </div>
         <div class="form-group">
             <label for="amountTransfert">Montant à transferer :</label>
-            <input type="number" class="form-control" id="amountTransfert" placeholder="Mininum requis : 1€" required pattern="[0-9]" min="1">
+            <input type="float" class="form-control" id="amountTransfert" placeholder="Mininum requis : 1€" required pattern="[0-9]{1,9}[\.][0-9]{0, 2}" min="1">
             <p id="wrongAmount" class="text-muted"></p>
         </div>
         <div class="form-group">
@@ -45,7 +45,6 @@ require "template/nav.php"; ?>
     </div>
 </div>
 
-<?php include "template/footer.php"; ?>
-
-<!-- Optional JavaScript -->
-<script src="public/js/virement.js"></script>
+<?php
+    $JS = "<script src='public/js/virement.js'></script>";
+include "template/footer.php"; ?>

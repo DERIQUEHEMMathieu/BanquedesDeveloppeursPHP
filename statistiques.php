@@ -23,7 +23,6 @@ require "template/nav.php"; ?>
     </table>
     <input type="button" value="Afficher les valeurs boursières" class="btn btn-secondary text-white" onclick="createArray()"></input>
 
-<?php include "template/footer.php"; ?>
-
-<!-- Optional JavaScript -->
-<script src="public/js/statistiques.js"></script>
+<?php
+    $JS = "<script src='public/js/statistiques.js'></script>";
+include "template/footer.php"; ?>

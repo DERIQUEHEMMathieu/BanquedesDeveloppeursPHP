@@ -18,7 +18,7 @@ require "template/nav.php"; ?>
         <form class="mb-4 offset-sm-4" style="font-weight: bolder; width: 390px;">
         <div class="form-group">
             <label for="baseAmount">Dépôt :</label>
-            <input type="number" class="form-control mb-2" id="amount" placeholder="Minimum : 1€" min="1" required pattern="[0-9]">
+            <input type="float" class="form-control mb-2" id="amount" placeholder="Minimum : 1€" min="1" required pattern="[0-9]{1,9}[\.][0-9]{0, 2}">
             <p id="wrongAmount" class="text-muted mb-2"></p>
             <label for="bankAccountType">Choix du compte vers lequel le dépôt sera effectif :</label>
             <select class="form-control" id="accountIn" required >
@@ -31,7 +31,7 @@ require "template/nav.php"; ?>
         <input type="submit" value="Valider" id="validation" class="btn btn-secondary text-white mb-4">
         <div class="form-group">
             <label for="baseAmount">Retrait :</label>
-            <input type="number" class="form-control mb-2" id="amountOut" placeholder="Minimum : 1€" min="1" required pattern="[0-9]">
+            <input type="float" class="form-control mb-2" id="amountOut" placeholder="Minimum : 1€" min="1" required pattern="[0-9]{1,9}[\.][0-9]{0, 2}">
             <p id="wrongAmountOut" class="text-muted mb-2"></p>
             <label for="bankAccountType">Choix du compte depuis lequel le retrait sera effectif :</label>
             <select class="form-control" id="accountOut" required >
@@ -46,7 +46,6 @@ require "template/nav.php"; ?>
     </div>
 </div>
 
-<?php include "template/footer.php"; ?>
-
-<!-- Optional JavaScript -->
-<script src="public/js/comptes.js"></script>
+<?php
+    $JS = "<script src='public/js/comptes.js'></script>";
+include "template/footer.php"; ?>

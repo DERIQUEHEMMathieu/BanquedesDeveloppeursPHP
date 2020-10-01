@@ -1,10 +1,9 @@
 <?php
 
-
 // If user's not logged then go to login page
 session_start();
 if (!isset($_SESSION['logged'])) {
-header('Location: login.php');
+  header('Location: login.php');
 };
 
 $site_title = "Banque des Développeurs";
@@ -12,15 +11,15 @@ $site_title = "Banque des Développeurs";
 require "template/nav.php"; ?>
 <?php include "template/header.php"; ?>
 <?php require_once "data/acounts.php" ?>
+<?php $acounts = get_accounts(); ?>
 
-<h4 class="text-center mx-auto my-4 bg-warning text-dark" style="width: 38%;">Récapitulatif de vos comptes et livrets</h4>
+<h4 class="text-center mx-auto my-2 bg-warning text-dark" style="width: 38%;">Récapitulatif de vos comptes et livrets</h4>
 
 <!-- Cards -->
 <div class="row justify-content-around">
-<?php $acounts = get_accounts(); ?>
 
 <?php
-foreach ($acounts as $key => $value) :
+  foreach ($acounts as $key => $value) :
 ?>
 
 <article class="card text-dark bg-warning font-weight-bold my-4 px-0 col-4" style="max-width: 18rem;">
@@ -38,11 +37,9 @@ foreach ($acounts as $key => $value) :
 </article>
 
 <?php
-endforeach;
+  endforeach;
 ?>
 
-<?php include "template/footer.php"; ?>
-
-<!-- Optional JavaScript -->
-<script src="public/js/layer.js"></script>
-<script src="public/js/main.js"></script>
+<?php
+  $JS = "<script src='public/js/layer.js'></script>";
+include "template/footer.php"; ?>

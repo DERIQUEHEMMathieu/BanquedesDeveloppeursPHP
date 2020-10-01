@@ -50,7 +50,6 @@ require "template/nav.php"; ?>
     </div>
 </div>
 
-<?php include "template/footer.php"; ?>
-
-<!-- Optional JavaScript -->
-<script src="public/js/articles.js"></script>
+<?php
+    $JS = "<script src='public/js/articles.js'></script>";
+include "template/footer.php"; ?>
