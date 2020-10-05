@@ -23,6 +23,16 @@ Il souhaiterait dans un premier temps intégrer les fonctionnalités çi-dessous
 
 - A la création d’un compte bancaire appliquer des vérifications de sécurité. Par exemple, vérifier que le type de compte est bien un type de compte autorisé (courant, pel, livret a, …). Vérifier également que les montant minimum à l’ouverture est bien d’au moins 50 euros.
 
+- L’application n’est accessible qu’aux seuls utilisateurs connectés.
+
+- Quand un utilisateur non connecté va sur l’application il est redirigé vers une page de connexion avec un formulaire.
+
+- Un utilisateur se connecte à l’aide d’une adresse mail et d’un mot de passe.
+
+- Une fois connecté, l’utilisateur voit uniquement ses comptes en banque personnels.
+
+- Quand l’utilisateur clique sur un compte en banque, il arrive sur une page dédié au compte où il voit les informations du compte mais aussi les dernières opérations effectuées sur le compte.
+
 
 ## Spécifications techniques :
 
@@ -31,3 +41,5 @@ Il souhaiterait dans un premier temps intégrer les fonctionnalités çi-dessous
 - Serveur Apache2
 
 - Base Boilerplate
+
+- SGBD : MySQL
