@@ -27,8 +27,8 @@ if($accountOperations):
     <h4 class="text-center mx-auto my-4 bg-warning text-dark" style="width: 40%;">Détails du compte</h4>
     <div class="row justify-content-center">
         <article class="card text-dark bg-warning font-weight-bold my-4 px-0 col-4" style="max-width: 20rem;">
-            <div class="card-header card-title text-center"><p><?php echo $accountOperations[0]["account_type"]?> <?php echo $_SESSION["user"]["lastname"]. " ".$_SESSION["user"]["firstname"] ?></p></div>
-            <!-- <div class="card-header text-center"><p>Propriétaire : <?php echo $account["owner"]; ?></p></div> -->
+            <div class="card-header card-title text-center"><p><?php echo $accountOperations[0]["account_type"]?></p></div>
+            <div class="card-header text-center"><p>Propriétaire : <?php echo $_SESSION["user"]["lastname"]. " ".$_SESSION["user"]["firstname"] ?></p></div>
             <div class="card-header text-center"><p>Numéro de compte : <?php echo $accountOperations[0]["id"]?></p></div>
             <div class="card-body bg-white text-center p-1">
             <?php

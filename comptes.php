@@ -6,22 +6,10 @@ require "database/session_start.php";
 require "database/connectdatabase.php";
 ?>
 
-<?php
-$infos = ["typeOfAccount","amount"];
-
-foreach($infos as $key => $value) :
-  $$value="Nous connaissons un problème : absence de données.";
-  if(isset($_POST[$value]) && !empty($_POST[$value])){
-    $$value=htmlspecialchars($_POST[$value]);
-}
-
-endforeach;
-?>
-
 <div class="row">
     <div class="col-sm-10">
         <h4 class="text-center offset-sm-3 my-4 bg-warning text-dark" style="width: 60%;">Effectuez un dépôt ou un retrait sur vos comptes</h4>
-        <form class="mb-4 offset-sm-4" style="font-weight: bolder; width: 390px;">
+        <form class="mb-4 offset-sm-4" style="font-weight: bolder; width: 390px;" action="" method="POST" id="">
         <div class="form-group">
             <label for="baseAmount">Dépôt :</label>
             <input type="float" class="form-control mb-2" id="amount" placeholder="Minimum : 1€" min="1" required pattern="[0-9]{1,9}[\.][0-9]{0, 2}">
