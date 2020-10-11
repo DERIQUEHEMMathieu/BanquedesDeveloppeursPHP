@@ -1,16 +1,22 @@
 <?php
+$site_title = "BdD : Retrait / Dépôt";
+require "template/nav.php";
+include "template/header.php";
+require "database/session_start.php";
+require "database/connectdatabase.php";
+?>
 
-// If user's not logged then go to login page
-session_start();
-if (!isset($_SESSION['logged'])) {
-    header('Location: login.php');
+<?php
+$infos = ["typeOfAccount","amount"];
+
+foreach($infos as $key => $value) :
+  $$value="Nous connaissons un problème : absence de données.";
+  if(isset($_POST[$value]) && !empty($_POST[$value])){
+    $$value=htmlspecialchars($_POST[$value]);
 }
 
-$site_title = "BdD : Retrait / Dépôt";
-
-require "template/nav.php"; ?>
-
-<?php include "template/header.php"; ?>
+endforeach;
+?>
 
 <div class="row">
     <div class="col-sm-10">

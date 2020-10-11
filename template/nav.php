@@ -43,6 +43,9 @@
         <li class="nav-item">
           <a class="nav-link" href="articles.php">Articles</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="database/deconnexion.php">Déconnexion</a>
+        </li>
       </ul>
     </div>
   </nav>
