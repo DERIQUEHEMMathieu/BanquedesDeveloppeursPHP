@@ -3,6 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <title><?php echo $site_title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="La Banque des Développeurs pour vour servir et conserver vos devices en lieu sûr">
     <meta name="keywords" content="Banque, Développeurs, conserver, devices, sûr">
@@ -14,7 +15,6 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="public/css/main.css">
 
-    <title><?php echo $site_title; ?></title>
   </head>
   <body>
   <!-- Nav -->
@@ -22,8 +22,9 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse font-weight-bold" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="index.php">Accueil</a>
         </li>
@@ -32,22 +33,27 @@
             Opérations
           </a>
           <div class="dropdown-menu" aria-labelledby="operations">
-            <a class="dropdown-item" href="souscrire.php">Souscrire</a>
-            <a class="dropdown-item" href="comptes.php">Retrait / Dépôt</a>
-            <a class="dropdown-item" href="virement.php">Virement</a>
+            <a class="dropdown-item" href="addCount.php">Souscrire</a>
+            <a class="dropdown-item" href="operation.php">Retrait / Dépôt</a>
+            <a class="dropdown-item" href="transfer.php">Virement</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="statistiques.php">Statistiques</a>
+          <a class="nav-link" href="statistic.php">Valeurs boursières</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="articles.php">Articles</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="database/deconnexion.php">Déconnexion</a>
+          <a class="nav-link" href="blog.php">Articles</a>
         </li>
       </ul>
     </div>
+    <aside class="nav-item">
+      <?php
+        if(isset($_SESSION) && isset($_SESSION["user"])) {
+          echo "<div class='font-weight-bold'>" . $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"];
+          echo "<a href='logout.php' class='btn btn-secondary text-white mx-2 px-2'>Déconnexion</a></div>";
+        }
+      ?>
+    </aside>
   </nav>
   <!-- End of Nav -->
 

@@ -64,6 +64,6 @@ if(!sessionStorage.getItem("informed")) {
       }
     }
   };
-  httpRequest.open('GET', 'data/layerSecurity.txt', true);
+  httpRequest.open('GET', 'model/data/layerSecurity.txt', true);
   httpRequest.send();
 }
