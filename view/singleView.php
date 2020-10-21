@@ -21,9 +21,12 @@ if(!isset($error)):
               <li class="list-group-item">Date d'ouverture : <?php echo $account["opening_date"]; ?></li>
             </ul>
             <a href="operation.php?id=<?php echo $account['id']; ?>" class="btn btn-secondary text-white">Dépôt / Retrait</a>
-            <a href="delete.php?id=<?php echo $account['id']; ?>" class="btn btn-secondary text-white">Clôturer</a>
             <a href="index.php" class="btn btn-secondary text-white">Retour</a>
           </div>
+          <form class="m-0 p-0" method="POST" id="suppressAccount" action="index.php">
+            <input type="hidden" name="suppressAccount" value="">
+            <button type="submit" class="col-12 btn btn-danger btn-lg p-1 m-0 text-center" name="suppressAccount">Supprimer le compte</button>
+          </form>
         </article>
       </div>
       <div class="col-12 col-md-6 col-lg-8">

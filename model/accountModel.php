@@ -88,17 +88,19 @@ function new_account($db, $account, $user) {
     "account_type" => $account["account_type"],
     "user_id" => $user["id"]
   ]);
-
   return $result;
 }
 
-function suppressAccount (PDO $db, int $accountID){
-  $query = $db ->prepare(
+function suppressAccount (PDO $db, int $accountID) {
+  var_dump($db);
+  $query = $db->prepare(
     "DELETE FROM Account
     WHERE id = :account_id
   ");
   $result = $query->execute([
-    "account_id" => $accountID
-    ]);
+    "account_id"=>$accountID
+  ]);
+  // var_dump($result);
+  return $result;
 }
 ?>
