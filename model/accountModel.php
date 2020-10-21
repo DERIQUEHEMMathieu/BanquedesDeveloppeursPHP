@@ -1,5 +1,10 @@
 <?php
-require "model/connexion.php";
+require "model/DBmanager.php";
+
+class UserManager extends DBmanager {
+
+}
+
 
 // Get all accounts with the last related operation for the logged user
 function get_accounts(PDO $db, Array $user) :?Array {
@@ -100,7 +105,7 @@ function suppressAccount (PDO $db, int $accountID) {
   $result = $query->execute([
     "account_id"=>$accountID
   ]);
-  // var_dump($result);
+  var_dump($result);
   return $result;
 }
 ?>

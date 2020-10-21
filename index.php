@@ -1,5 +1,7 @@
 <?php
 require "model/accountModel.php";
+require "model/accountManager.php";
+
 // Check if user is logged
 session_start();
 if(!isset($_SESSION["user"])) {
@@ -7,8 +9,11 @@ if(!isset($_SESSION["user"])) {
   exit();
 }
 
-// Get all the accounts with the last operation
-$accounts = get_accounts($db, $_SESSION["user"]);
+ $accountManager = new AccountManager();
+
+ $accounts = $accountManager->get_accounts($_SESSION["user"]);
 
 require "view/indexView.php";
 ?>
+
+
