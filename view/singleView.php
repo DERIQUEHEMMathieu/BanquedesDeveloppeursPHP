@@ -23,7 +23,7 @@ if(!isset($error)):
             <a href="operation.php?id=<?php echo $account['id']; ?>" class="btn btn-secondary text-white">Dépôt / Retrait</a>
             <a href="index.php" class="btn btn-secondary text-white">Retour</a>
           </div>
-          <form class="m-0 p-0" method="POST" id="suppressAccount" action="index.php">
+          <form class="m-0 p-0" method="POST" id="suppressAccount" action="">
             <input type="hidden" name="suppressAccount" value="">
             <button type="submit" class="col-12 btn btn-danger btn-lg p-1 m-0 text-center" name="suppressAccount">Supprimer le compte</button>
           </form>

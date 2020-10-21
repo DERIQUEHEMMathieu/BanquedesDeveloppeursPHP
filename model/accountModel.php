@@ -91,16 +91,15 @@ function new_account($db, $account, $user) {
   return $result;
 }
 
+// Penser à SQL Cascade sur PHP MyAdmin pour pouvoir supprimer les opérations liées avec la clés étrangère
 function suppressAccount (PDO $db, int $accountID) {
-  var_dump($db);
   $query = $db->prepare(
-    "DELETE FROM Account
+    "DELETE FROM account
     WHERE id = :account_id
   ");
   $result = $query->execute([
-    "account_id"=>$accountID
+    "account_id" => $accountID
   ]);
-  // var_dump($result);
   return $result;
 }
 ?>

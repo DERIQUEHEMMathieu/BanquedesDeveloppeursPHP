@@ -19,10 +19,10 @@ if(!$account || ($account["user_id"] !== $_SESSION["user"]["id"])) {
 }
 
 if (isset($_POST["suppressAccount"]) && !empty($_POST)){
-  suppressAccount($db, intval($account["id"]));
+  suppressAccount($db, $account["id"]);
   header("Location: index.php");
   exit();
 }
-var_dump($account["id"]);
+
 require "view/singleView.php";
 ?>
