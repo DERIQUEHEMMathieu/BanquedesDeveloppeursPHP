@@ -1,5 +1,4 @@
 <?php
-require "model/accountModel.php";
 require "model/accountManager.php";
 
 // Check if user is logged

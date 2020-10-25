@@ -1,5 +1,5 @@
 <?php
-require "model/accountModel.php";
+require "model/accountManager.php";
 
 session_start();
 if(!isset($_SESSION["user"])) {
@@ -29,7 +29,8 @@ if(isset($_POST["new_account"])) {
   // If no error has been found
   if(empty($error)) {
     // Add the account in DB
-    $result = new_account($db, $_POST, $_SESSION["user"]);
+    $accountManager = new AccountManager();
+    $result = $accountManager->new_account($_POST, $_SESSION["user"]);
     // If insert is a success redirect on home page
     if($result) {
       header("Location: index.php");
