@@ -17,8 +17,7 @@ if(!empty($_POST) && isset($_POST["operation"])) {
   }
   else {
     // Try to find the account selected in the form
-    $accountManager = new AccountManager ();
-    $account = $accountManager->get_only_account($_POST["account_id"], $_SESSION["user"]);
+    $account = get_only_account($db, $_POST["account_id"], $_SESSION["user"]);
     // If an account has been found
     if($account) {
       // Update the amount of the account according to the type of operation
@@ -30,13 +29,11 @@ if(!empty($_POST) && isset($_POST["operation"])) {
         $account["amount"] = floatval($account["amount"]) + floatval($_POST["amount"]);
       }
       // Register the operation in DB
-      $operationManager = new OperationManager ();
-      $new_op = $operationManager->new_operation($_POST);
+      $new_op = new_operation($db, $_POST);
       // If the operation has successfully been registered
       if($new_op) {
         // Update the amount of the account in DB
-        $accountManager = new AccountManager ();
-        $result = $accountManager->update_account_amount($account);
+        $result = update_account_amount($db, $account);
         // If the update is a success make a message diplayed in view
         if($result) {
           $success = "Votre opération a bien été enregistrée";
@@ -47,8 +44,7 @@ if(!empty($_POST) && isset($_POST["operation"])) {
 }
 
 // Get all the accounts for one user
-$accountManager = new AccountManager();
-$account_list = $accountManager->get_account_list($_SESSION["user"]);
+$account_list = get_account_list($db, $_SESSION["user"]);
 
 require "view/operationView.php";
 ?>

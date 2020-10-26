@@ -49,7 +49,7 @@
     <aside class="nav-item">
       <?php
         if(isset($_SESSION) && isset($_SESSION["user"])) {
-          echo "<div class='font-weight-bold'>" . $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"];
+          echo "<div class='font-weight-bold'>" . $_SESSION["user"]->getFirstname() . " " . $_SESSION["user"]->getLastname();
           echo "<a href='logout.php' class='btn btn-secondary text-white mx-2 px-2'>Déconnexion</a></div>";
         }
       ?>

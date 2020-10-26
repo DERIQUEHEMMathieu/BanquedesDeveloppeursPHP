@@ -12,7 +12,7 @@ abstract class dataBase {
   const LOGIN = "BanquePHP";
   const PASSWORD = "banque76";
 
-  static public function DB() {
+  public static function DB() {
     try {
     $db = new PDO("mysql:host=" . self::HOST .";dbname=" . self::NAME , self::LOGIN, self::PASSWORD);
     return $db;
