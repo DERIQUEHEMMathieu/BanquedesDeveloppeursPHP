@@ -13,7 +13,8 @@ if(!empty($_POST) && isset($_POST["connexion"])) {
     // Sanitize the mail input, no htmlspecialchars because no displaying on the page
     $_POST["email"] = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     // Search for a user according to the given email
-    $user = get_user_by_email($db, $_POST);
+    $userManager = new UserManager();
+    $user = $userManager->get_user_by_email($_POST);
     // If a user has been found
     if($user) {
       // Check the password and if it is correct log the user and go to home page
