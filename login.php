@@ -1,5 +1,5 @@
 <?php
-require "model/userModel.php";
+require "model/userManager.php";
 // If the connexion form has been submited
 if(!empty($_POST) && isset($_POST["connexion"])) {
   // Check for empty values (array filter removes empty values from array)
